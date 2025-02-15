@@ -1,0 +1,174 @@
+/* Base styles */
+body {
+  background-color: #f8f8f8;
+  color: #333;
+  font-family: Lato, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.header {
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: right;
+}
+
+.header__image {
+  width: 100%;
+}
+
+.header__link {
+  font-family: fantasy, cursive;
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .header {
+    text-align: center;
+  }
+}
+
+/* Main content */
+.main {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+/* Todo form */
+.todo-form {
+  margin-bottom: 20px;
+}
+
+.todo-form__label {
+  color: #333;
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  padding: 30px 0 10px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #333;
+}
+
+.todo-form__row {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-form__input {
+  flex: 1;
+  font-size: 18px;
+  height: 21px;
+  padding: 0 9px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+}
+
+.todo-form__input:focus {
+  color: #333;
+  outline: none;
+}
+
+.todo-form__button {
+  background: none;
+  border: 0;
+  color: #888;
+  font-size: 15px;
+  padding: 0 10px;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+
+.todo-form__button:hover {
+  color: #3a3a3a;
+}
+
+/* Tasks section */
+.tasks-section__title {
+  color: #333;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  padding: 30px 0 10px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #333;
+}
+
+/* Tasks list */
+.tasks-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tasks-list__item {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  gap: 10px;
+}
+
+.tasks-list__checkbox {
+  margin: 0;
+}
+
+.tasks-list__label {
+  font-size: 18px;
+  flex: 1;
+}
+
+.tasks-list__input {
+  display: none;
+  font-size: 18px;
+  height: 21px;
+  padding: 0 9px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+  flex: 1;
+}
+
+.tasks-list__button {
+  background: none;
+  border: 0;
+  color: #888;
+  font-size: 15px;
+  padding: 0 10px;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+
+.tasks-list__button:hover {
+  color: #3a3a3a;
+}
+
+.tasks-list__delete-icon {
+  height: 2em;
+  transform: rotateZ(45deg);
+  transition: transform 200ms ease-in;
+}
+
+.tasks-list__delete-icon:hover {
+  transform: rotateZ(0);
+}
+
+/* Edit mode */
+.tasks-list__item--edit-mode .tasks-list__input {
+  display: block;
+}
+
+.tasks-list__item--edit-mode .tasks-list__label {
+  display: none;
+}
+
+/* Completed tasks */
+#completed-tasks .tasks-list__label {
+  text-decoration: line-through;
+  color: #888;
+}
